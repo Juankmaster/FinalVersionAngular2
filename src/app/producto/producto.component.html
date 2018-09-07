@@ -1,0 +1,27 @@
+<div class="fondos">
+  <div class="container">
+    <app-var-nav> </app-var-nav>
+      <div class="card row">
+        <div class="col s12 m12">
+          <h4  align="center" style="background:pink">{{producto?.nombre}}</h4>
+        </div>
+        <br>
+        <br>
+
+      <div class="row">
+        <div class="col s12 m6 offset-m1">
+          <img src="{{producto?.img}}" class="responsive-img" width="350px" height="150px">
+        </div>
+
+        <div class="col s12 m4">
+          <p class="card-title"><b>Precio: $</b>{{producto?.precio}}</p>
+          <p class="card-title"><b>Unidades disponibles: </b>{{producto?.stock}}</p>
+        </div>
+      </div>
+
+      <div class="card-action">
+        <a routerLink="/panel" class="btn-small">Volver</a>
+      </div>
+    </div>
+  </div>
+</div>

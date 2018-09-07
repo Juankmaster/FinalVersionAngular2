@@ -4,11 +4,19 @@
   <meta charset="utf-8">
   <title>VersionAngular2</title>
   <base href="/">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root>Loading...</app-root>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.sidenav');
+     M.AutoInit();
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+
+    <div class="row contenedor">
+      <div class="row inicio">
+        <div class="col s12 m8 " >
+          <h3 class="flow-text">Catálogo de Productos</h3>
+        </div>
+        <div class="col s12 m4 " >
+          <h6 class="flow-text">¿Que estás buscando?</h6>
+          <p><input type="text" [(ngModel)]="campoFiltro" placeholder=" Buscar Producto" (keyup)="filtroProductos($event)"> </p>
+        </div>
+      </div>
+      <!-- Componente -->
+      <div class="row contenido" style="width:100%; height:600px; overflow: scroll;">
+        <div class="col s12 m4 l3" *ngFor="let produc of productoFiltrados">
+          <div class="card" >
+            <img class="responsive-img" src="../{{produc.img}}">
+              <h5 class="card-title"><b>{{produc.nombre}}</b></h5>
+                <span> <b>Precio:$</b>{{produc.precio}}</span><br>
+                <span><b>Unidades disponibles:</b>{{produc.stock}}</span><br><br>
+                <a [routerLink]="['/producto',produc.id]" class="blue accent-3  btn-small">Ver +</a>
+                <a class="deep-orange btn-small">Añadir</a>
+              <input id="canpro" type="number" min="1" max="10" value="0" >
+          </div>
+        </div>
+      </div>
+    </div>

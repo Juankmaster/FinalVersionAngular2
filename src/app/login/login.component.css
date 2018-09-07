@@ -1,0 +1,35 @@
+.container{
+  background-image: url('assets/login-fondo.jpg');
+  
+  width: 100%;
+  height: 50em;
+}
+.form{
+  margin-top: 10em;
+}
+#email, #password{
+  color: black;
+  background: rgba(245,244,245,0.9);
+  border-radius: 5px;
+}
+h2{
+  text-align: center;
+  color: white;
+}
+#boton{
+  text-align: center;
+}
+.white-text{
+  color: white;
+}
+
+.error{
+  color: red;
+}
+.login{
+  background: white;
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+}

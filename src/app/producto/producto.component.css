@@ -1,0 +1,9 @@
+
+.fondos{
+  background-image: url('./assets/main-fondo.jpg');
+  background-attachment: fixed;
+  height: 900px;
+}
+.container{
+  width: 90%;
+}

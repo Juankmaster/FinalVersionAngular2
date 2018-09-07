@@ -1,0 +1,38 @@
+<div class="container fondo">
+  <div class="row">
+    <form class="col s12 form" (ngSubmit)="submitForm(f)" #f="ngForm">
+      <div class="row">
+        <div class="input-field col s6 offset-s3 m4 offset-m4">
+          <h2>Inicia Sesión</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6 offset-s3 m4 offset-m4">
+          <label for="email">Email</label>
+          <label *ngIf="!usuarioValido" class="error">Debes introducir un nombre de usuario válido</label>
+          <input id="email" type="email"  validate [(ngModel)]="user.username" name="username">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6 offset-s3 m4 offset-m4">
+          <label for="password">Password</label>
+          <label *ngIf="!passwordValido" class="error">Debes introducir una contraseña válida</label>
+          <input id="password" type="password"  validate [(ngModel)]="user.password" name="password">
+        </div>
+      </div>
+      <div class="row login" *ngIf="!loginValido">
+          <span class="error">!Usuario o contraseña no validos</span>
+      </div>
+
+      <div class="row" id="boton">
+        <div  class=" col s12  m12 ">
+          <!-- <a class="waves-effect green accent-3 btn boton" (click)="login()">Login</a> -->
+            <button type="submit"  name="button" class="waves-effect green accent-3 btn boton">Ingresar</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
