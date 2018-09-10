@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { VarNavComponent } from '../var-nav/var-nav.component';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
+// import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Productos } from '../Productos';
 
@@ -25,6 +25,7 @@ export class ProductoComponent implements OnInit {
           .subscribe(
                    (data)=> {
                     this.producto=data;
+
            }
         )
     });

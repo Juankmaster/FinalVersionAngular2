@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductosService } from '../productos.service';
 
 
 @Component({
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VarNavComponent implements OnInit {
 
-  constructor() { }
+  items:number;
+
+  constructor(private item:ProductosService) {}
 
   ngOnInit() {
+
   }
 
 }

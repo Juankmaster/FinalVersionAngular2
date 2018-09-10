@@ -9,16 +9,22 @@ import 'rxjs/Rx';
 export class ProductosService  {
 
  productos : Productos[]=[];
+ cantidad:number;
+ itemsCompras:number;
 
-  constructor(public datos : HttpService) { }
+  constructor() { }
 
-    productosCatalogo(){
-      this.datos.getProductos()
-      .subscribe(
-        (data) => {
-          this.productos = data
-        }
+    productosCarrito(producto:Array<any>, cantidad:number){
 
-      )
+          this.productos=producto
+          this.itemsCompras=producto.length
+            this.cantidad=cantidad
+
  }
+
+   // actualizarCarritoItem(tamaño:number){
+   //   this.itemsCompras=tamaño;
+   //
+   //
+   // }
  }

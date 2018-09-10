@@ -16,11 +16,11 @@
             <img class="responsive-img" src="../{{produc.img}}">
               <h5 class="card-title"><b>{{produc.nombre}}</b></h5>
                 <span> <b>Precio:$</b>{{produc.precio}}</span><br>
-                <span><b>Unidades disponibles:</b>{{produc.stock}}</span><br><br>
-                <a [routerLink]="['/producto',produc.id]" class="blue accent-3  btn-small">Ver +</a>
-                <a class="deep-orange btn-small">Añadir</a>
-              <input id="canpro" type="number" min="1" max="10" value="0" >
-          </div>
-        </div>
-      </div>
+                 <span><b>Unidades disponibles:</b>{{produc.stock}}</span><br><br>
+                 <a [routerLink]="['/producto',produc.id]" class="blue accent-3  btn-small">Ver +</a>
+                <a class="deep-orange btn-small" (click)="agregarCarrito(produc.nombre)">Añadir</a>
+              <input id="canpro"#canpro (click)="canProductos(canpro.value)" type="number" min="1" max="10" value="0" >
+           </div>
+         </div>
+       </div>
     </div>

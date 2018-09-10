@@ -4,3 +4,12 @@
 .brand-logo{
   padding-left: 8px;
 }
+ .items{
+  background: red;
+  width: 30px !important;
+  border-radius:35px;
+  height: 30px;
+  margin-top: 10px;
+  padding-left: 0;
+
+}
