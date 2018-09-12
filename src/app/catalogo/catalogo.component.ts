@@ -17,7 +17,7 @@ export class CatalogoComponent implements OnInit {
     producto : Productos[]=[];
     productoFiltrados : Productos[];
     productoSeleccionado : Productos[];
-    productoAgregado : Object[]=[];
+    // productoAgregado : Object[];
     campoFiltro:string;
     canProducto:number;
 
@@ -62,8 +62,8 @@ export class CatalogoComponent implements OnInit {
         this.productoSeleccionado = this.producto.filter(
           produc => produc.nombre.indexOf(nombre)>=0
       )
-         this.productoAgregado.push(this.productoSeleccionado);
-         this.servicio.productosCarrito(this.productoAgregado, this.canProducto)
+         // this.productoAgregado.push(this.productoSeleccionado);
+         this.servicio.productosCarrito(this.productoSeleccionado,this.canProducto)
          this.canProducto=0;
 
     }else{

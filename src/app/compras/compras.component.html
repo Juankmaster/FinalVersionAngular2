@@ -2,26 +2,28 @@
   <div class="container">
     <app-var-nav> </app-var-nav>
       <div class="card row">
-        <div class="col s12 m12">
-          <h4  align="center" style="background:pink">{{producto?.nombre}}</h4>
-        </div>
-        <br>
-        <br>
+        <div class="col s12 m8">
 
-      <div class="row">
-        <div class="col s12 m6 offset-m1">
-          <img src="{{producto?.img}}" class="responsive-img" width="350px" height="150px">
+          <ul class="collection">
+            <li class="collection-item avatar" *ngFor="let produc of productosCom">
+              <img src="{{produc.img}}" alt="" class="circle" width="90px" height="100px">
+              <span class="title"><b>{{produc.nombre}}</b></span>
+              <p><b>Unidades: </b>{{produc.canti}} <br>
+                <b>Subtotal:$ </b>{{produc.subtotal}}
+              </p>
+            </li>
+          </ul>
         </div>
 
         <div class="col s12 m4">
-          <p class="card-title"><b>Precio: $</b>{{producto?.precio}}</p>
-          <p class="card-title"><b>Unidades disponibles: </b>{{producto?.stock}}</p>
+           <p class="card-title"><b>Total: $ {{total}}</b></p>
+             <a routerLink="/panel" class="btn-small">Pagar</a>
+             <a routerLink="/panel" class="btn-small">Cancelar</a>
         </div>
-      </div>
+        <br>
+        <br>
+        <br>
 
-      <div class="card-action">
-        <a routerLink="/panel" class="btn-small">Volver</a>
-      </div>
     </div>
   </div>
 </div>
