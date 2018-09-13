@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductosService } from '../productos.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,10 +12,14 @@ export class VarNavComponent implements OnInit {
 
   items:number;
 
-  constructor(private item:ProductosService) {}
+  constructor(private item:ProductosService, private ruta:Router) {}
 
   ngOnInit() {
 
+  }
+  irProductos(){
+    this.item.itemsCompras=0
+    this.ruta.navigate(['./compras']);
   }
 
 }

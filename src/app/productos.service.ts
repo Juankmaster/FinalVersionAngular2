@@ -11,6 +11,7 @@ export class ProductosService  {
 
  productos : Productos[];
  productoItem : Object[]=Array();
+ productoItems : Object[]=Array();
  cantidad:number;
  itemsCompras:number;
 
@@ -18,7 +19,7 @@ export class ProductosService  {
 
     productosCarrito(producto:Productos[], cantidad:number){
 
-        this.productos=producto
+        //this.productos.producto
         this.cantidad=cantidad
         if(cantidad > 0){
 
@@ -35,14 +36,25 @@ export class ProductosService  {
               }
             this.productoItem.push(productosI)
             this.itemsCompras=this.productoItem.length
+        }
+        //Prueba
+        for (let res of producto){
+
+              let productoActualizar = {
+                id:res.id,
+                img:res.img,
+                nombre:res.nombre,
+                precio:res.precio,
+                stock:res.stock-cantidad
+
+              }
+             this.productoItems.push(productoActualizar)
+             console.log("Estoy el servicio productos")
+             console.log(this.productoItems)
 
         }
-}
- }
+        //Fin prueba
+      }
+    }
 
-   // actualizarCarritoItem(tamaño:number){
-   //   this.itemsCompras=tamaño;
-   //
-   //
-   // }
  }

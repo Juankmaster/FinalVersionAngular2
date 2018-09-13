@@ -5,7 +5,7 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><i class="material-icons">apps</i></li>
-          <li *ngIf="item.itemsCompras>0"><a class="btn red" routerLink="/compras"><i class="material-icons right">local_grocery_store</i>{{item.itemsCompras}}</a></li>
+          <li *ngIf="item.itemsCompras>0"><a class="btn red" (click)="irProductos()"><i class="material-icons right">local_grocery_store</i>{{item.itemsCompras}}</a></li>
           <li><a routerLink="/panel"><i class="material-icons">storage</i></a></li>
           <li><a routerLink="/login"><i class="material-icons">exit_to_app</i></a></li>
         </ul>

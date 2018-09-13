@@ -17,8 +17,8 @@
 
         <div class="col s12 m4">
            <p class="card-title"><b>Total: $ {{total}}</b></p>
-             <a routerLink="/panel" class="btn-small">Pagar</a>
-             <a routerLink="/panel" class="btn-small">Cancelar</a>
+             <a (click)="realizarCompra()" class="btn-small">Pagar</a>
+             <a (click)="cancelarVenta()" class="btn-small">Cancelar</a>
         </div>
         <br>
         <br>
