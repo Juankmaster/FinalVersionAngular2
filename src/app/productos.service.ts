@@ -47,11 +47,8 @@ export class ProductosService  {
                 precio:res.precio,
                 stock:res.stock-cantidad
 
-              }
-             this.productoItems.push(productoActualizar)
-             console.log("Estoy el servicio productos")
-             console.log(this.productoItems)
-
+            }
+              this.productoItems.push(productoActualizar)
         }
         //Fin prueba
       }

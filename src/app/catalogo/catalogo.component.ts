@@ -73,7 +73,6 @@ export class CatalogoComponent implements OnInit {
 
 }
 
-
 //Metodo para contar la cantidad de productos
   canProductos(cant:number){
     this.canProducto=cant;

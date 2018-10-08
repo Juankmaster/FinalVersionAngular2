@@ -21,16 +21,22 @@ export class HttpService {
       }
 
     getProductoId(id:string){
-      return this.http.get('https://tareafinal-8729a.firebaseio.com/productos/'+ id+'.json')
+      return this.http.get('https://tareafinal-8729a.firebaseio.com/productos/'+id+'.json')
      .map((response : Response)=> response.json())
 
       }
 
-    putProductoId(producto:Productos[]){
-      let datos = JSON.stringify(producto);
-      return this.http.put('https://tareafinal-8729a.firebaseio.com/productos.json',datos)
-     .map((response : Response)=> response.json())
+    putProductoId(producto:Productos) {
 
+      let datos = JSON.stringify(producto);
+
+      let url = "https://tareafinal-8729a.firebaseio.com/productos/"+ producto.id +'.json';
+
+      return this.http.put(
+        url,
+        producto
+      )
+     .map((response : Response)=> response.json())
       }
 
 }
